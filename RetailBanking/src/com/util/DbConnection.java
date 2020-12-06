@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DbConnection {
 	
-	private static final String dburl = "jdbc:mysql://localhost:3306/testdb";
+	private static final String dburl = "jdbc:mysql://localhost:3306/bankdb";
 	private static final String dbname="root";
 	private static final String dbpassword="danish";
 	private static final String dbdriver="com.mysql.cj.jdbc.Driver";

@@ -1,8 +1,10 @@
 package com.bean;
 
+import java.math.BigInteger;
+
 public class Customer {
 	private int customerId;
-	private int aadhaar;
+	private long aadhaar;
 	private String name;
 	private int age;
 	private String address1;
@@ -10,10 +12,10 @@ public class Customer {
 	private String city;
 	private String state;
 	
-	public Customer(int customerId, int aadhaar, String name, int age, String address1, String address2, String city,
+	public Customer(long aadhaar, String name, int age, String address1, String address2, String city,
 			String state) {
 		super();
-		this.customerId = customerId;
+		this.customerId = 0;
 		this.aadhaar = aadhaar;
 		this.name = name;
 		this.age = age;
@@ -35,11 +37,11 @@ public class Customer {
 		this.customerId = customerId;
 	}
 
-	public int getAadhaar() {
+	public long getAadhaar() {
 		return aadhaar;
 	}
 
-	public void setAadhaar(int aadhaar) {
+	public void setAadhaar(long aadhaar) {
 		this.aadhaar = aadhaar;
 	}
 
