@@ -18,7 +18,7 @@ public class CustomerDao {
 		int x=0,customerId=0;
 		Connection con = DbConnection.getConnection();
 		System.out.println("connection ok!!");
-		String sql = "insert into customer values(null,?,?,?,?,?,?,?)";
+		String sql = "insert into customer values(null,?,?,?,?,?,?,?,?)";
 		try {
 			PreparedStatement ps = con.prepareStatement(sql);
 			ps.setLong(1, customer.getAadhaar());
@@ -28,6 +28,7 @@ public class CustomerDao {
 			ps.setString(5, customer.getAddress2());
 			ps.setString(6, customer.getCity());
 			ps.setString(7, customer.getState());
+			ps.setString(8, customer.getStatus());
 			x= ps.executeUpdate();
 			
 			if(x>0) {
@@ -146,5 +147,20 @@ public class CustomerDao {
 			e.printStackTrace();
 		}
 		return x;
+	}
+	
+	public int changeStatus(int customerId,String status) {
+		int x=0;
+		Connection con = DbConnection.getConnection();
+		String sql = "update customer set status=? where customerId=?";
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, status);
+			ps.setInt(2, customerId);
+			x=ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return x;	
 	}
 }

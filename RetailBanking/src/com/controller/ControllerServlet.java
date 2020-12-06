@@ -40,7 +40,8 @@ public class ControllerServlet extends HttpServlet {
 //		}
 //		System.out.println(cd.viewCustomer(100493035));
 //		cd.updatePatient(customer, 100493036) ;
-		cd.deleteCustomer(100493036);
+//		cd.deleteCustomer(100493036);
+		cd.changeStatus(100493037, "inactive");
 	}
 
 	
