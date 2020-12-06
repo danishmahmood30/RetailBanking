@@ -11,6 +11,7 @@ public class Customer {
 	private String address2;
 	private String city;
 	private String state;
+	private String status;
 	
 	public Customer(long aadhaar, String name, int age, String address1, String address2, String city,
 			String state) {
@@ -23,6 +24,7 @@ public class Customer {
 		this.address2 = address2;
 		this.city = city;
 		this.state = state;
+		this.status = "active";
 	}
 
 	public Customer() {
@@ -91,6 +93,14 @@ public class Customer {
 
 	public void setState(String state) {
 		this.state = state;
+	}
+	
+	public String getStatus() {
+		return status;
+	}
+	
+	public void setStatus(String status) {
+		this.status = status;
 	}
 	
 	
