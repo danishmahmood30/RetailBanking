@@ -12,7 +12,7 @@ import com.util.DbConnection;
 public class CustomerDao {
 	
 	public static int customerid=0;
-	public int addPatient(Customer customer ) {
+	public int addCustomer(Customer customer ) {
 		
 		System.out.println("inside add customer");
 		int x=0,customerId=0;
@@ -50,7 +50,7 @@ public class CustomerDao {
 		return customerId;
 	}
 	
-	public int updatePatient(Customer customer, int customerId) {
+	public int updateCustomer(Customer customer, int customerId) {
 		int x=0;
 		Connection con = DbConnection.getConnection();
 		String sql = "update customer set name=?, age=?, address1=?, address2=?, city=?, state=? where customerId=?";
